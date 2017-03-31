@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_game_setup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sctech.chris.musicality.GameSetup">
+
+    <Button
+        android:text="Choose Playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:id="@+id/bChoosePlaylist"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:onClick="onChoosePlaylistClick"
+        android:focusableInTouchMode="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Setup"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:id="@+id/txtTitle"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPlaylist"
+        android:layout_below="@+id/bChoosePlaylist"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp" />
+
+    <TextView
+        android:text="Solids"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/txtSolids"
+        android:layout_below="@+id/txtPlaylist"
+        android:layout_alignStart="@+id/txtTitle"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_width="65dp" />
+
+    <TextView
+        android:id="@+id/txtPasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtTitle"
+        android:layout_below="@+id/txtPlaylist"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Passes"
+        android:textSize="20sp" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numPickPasses"
+        android:layout_below="@+id/txtPasses"
+        android:layout_alignRight="@+id/txtPasses"
+        android:layout_alignLeft="@+id/txtPasses"/>
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numPickSolids"
+        android:layout_below="@+id/txtSolids"
+        android:layout_alignRight="@+id/txtSolids"
+        android:layout_alignLeft="@+id/txtSolids" />
+
+    <Button
+        android:text="Invite Players"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numPickPasses"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bInvitePlayers"
+        android:textSize="18sp"
+        android:onClick="onInvitePlayersClick" />
+
+
+</RelativeLayout>

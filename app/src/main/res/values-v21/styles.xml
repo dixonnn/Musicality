@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Material.Light.NoActionBar.NoActionBar" parent="android:Theme.Material.NoActionBar" />
+
+    <style name="GreenGrey" parent="Theme.AppCompat.NoActionBar" >
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+    </style>
+</resources>
