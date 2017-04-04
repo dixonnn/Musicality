@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'Musicality'
+            keyPassword 'y7e$iwrm'
+            storeFile file('/home/chris/keystore/android.jks')
+            storePassword 'y7e$iwrm'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion '25.0.0'
-
     defaultConfig {
         applicationId "com.sctech.chris.Musicality"
         minSdkVersion 21
@@ -15,6 +22,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }
@@ -28,18 +36,13 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':BaseGameUtils')
-
     // This library handles authentication and authorization
-    
-
     // This library handles music playback
     compile 'com.spotify.sdk:spotify-player-24-noconnect-2.20b@aar'
-
-    compile    'com.spotify.sdk:spotify-android-auth:1.0.0@aar'
-    compile    'com.android.support:appcompat-v7:23.1.1'
-    compile    'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-    testCompile'junit:junit:4.12'
+    compile 'com.spotify.sdk:spotify-android-auth:1.0.0@aar'
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    testCompile 'junit:junit:4.12'
 }

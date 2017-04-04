@@ -81,6 +81,7 @@ public class MainActivity extends Activity implements
             mAutoStartSignInFlow = false;
             mSignInClicked = false;
             mResolvingConnectionFailure = true;
+            System.out.println("Resolving...");
 
             // Attempt to resolve the connection failure using BaseGameUtils.
             // The R.string.signin_other_error value should reference a generic
@@ -90,6 +91,7 @@ public class MainActivity extends Activity implements
                     mGoogleApiClient, connectionResult,
                     RC_SIGN_IN, "There was an issue with sign-in, please try again later.")) {
                 mResolvingConnectionFailure = false;
+                System.out.println("Trying to resolve connection failure.");
             }
         }
 
@@ -116,6 +118,7 @@ public class MainActivity extends Activity implements
                 // could not be signed in, such as "Unable to sign in."
                 BaseGameUtils.showActivityResultError(this,
                         requestCode, resultCode, R.string.signin_failure);
+                System.out.println("Showing Activity Result Error.");
             }
         }
     }
