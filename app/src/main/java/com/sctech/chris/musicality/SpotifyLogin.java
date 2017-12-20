@@ -26,7 +26,7 @@ public class SpotifyLogin extends Activity implements
     /*
     * Spotify Api Variables
     * */
-    private static final String CLIENT_ID = "ff45b4b70f4a466ba414d6bde50caa5e";
+    private static final String CLIENT_ID = "";
     private static final String REDIRECT_URI = "whipwhip://callback";
 
     private static final int REQUEST_CODE = 1337;
